@@ -13,7 +13,7 @@ type RandomStack interface {
 	// Pop returns a random item from the stack.
 	Pop() interface{}
 
-	// Pop returns a random item from the stack.
+	// Push puts the item in the stack.
 	Push(value interface{})
 }
 
@@ -44,7 +44,7 @@ func (rs *randomstack) Pop() interface{} {
 	return item
 }
 
-// Pop returns a random item from the stack.
+// Push puts the item in the stack.
 func (rs *randomstack) Push(value interface{}) {
 	rs.data = append(rs.data, value)
 }
